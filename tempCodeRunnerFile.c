@@ -1,15 +1,17 @@
-#include<stdio.h>
-void swap(int *x, int *y){
-int temp = *x;
-*x = *y;
-*y = temp;
-}
-int main(){
-int a,b;
-printf("Enter two numbers: ");
-scanf("%d %d",&a,&b);
-printf("Before swapping: a=%d,b=%d\n",a,b);
-swap(&a,&b);
-printf("After swapping: a=%d,b=%d\n",a,b);
-return 0;
+#include <stdio.h>
+
+int main() {
+    int n, i, count = 0, num = 1;
+
+    printf("Enter the value of n: ");
+    scanf("%d", &n);
+
+    for (i = 1; count < n; i++) {
+        if (i % 7 == 0) {
+            printf("%d\n", i);
+            count++;
+        }
+    }
+
+    return 0;
 }
