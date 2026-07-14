@@ -1,20 +1,17 @@
 #include <stdio.h>
 #include <stdbool.h>
 
-// Number of vertices in the graph
 #define V 5
 
-// Utility function to print the solution path
 void printSolution(int path[]) {
     printf("Hamiltonian Cycle exists! Here is one valid path:\n");
     for (int i = 0; i < V; i++) {
         printf(" %d ->", path[i]);
     }
-    // Return to the starting vertex to complete the cycle
+   
     printf(" %d\n", path[0]);
 }
 
-// A utility function to check if the vertex v can be added at index 'pos'
 bool isSafe(int v, bool graph[V][V], int path[], int pos) {
     // Check if this vertex is an adjacent vertex of the previously added vertex
     if (graph[path[pos - 1]][v] == 0) {
