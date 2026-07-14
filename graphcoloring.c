@@ -3,7 +3,7 @@
 int graph[10][10], color[10];
 int n, m;
 
-// Function to check if current color can be assigned
+
 int isSafe(int v, int c)
 {
     int i;
@@ -15,7 +15,6 @@ int isSafe(int v, int c)
     return 1;
 }
 
-// Backtracking function
 int graphColoring(int v)
 {
     int c;
