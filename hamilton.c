@@ -60,17 +60,14 @@ bool hamCycleUtil(bool graph[V][V], int path[], int pos) {
     return false;
 }
 
-// This function solves the Hamiltonian Cycle problem using Backtracking.
-// It returns false if there is no Hamiltonian Cycle, otherwise returns true 
-// and prints the path.
+
 bool hamCycle(bool graph[V][V]) {
     int path[V];
     for (int i = 0; i < V; i++) {
         path[i] = -1;
     }
 
-    // Let us put vertex 0 as the first vertex in the path. 
-    // If there is a Hamiltonian Cycle, the cycle can be started from any point.
+   
     path[0] = 0;
     
     if (hamCycleUtil(graph, path, 1) == false) {
@@ -99,7 +96,7 @@ int main() {
         {1, 1, 0, 1, 0},
     };
 
-    // Print the solution
+   
     hamCycle(graph1);
 
     return 0;
