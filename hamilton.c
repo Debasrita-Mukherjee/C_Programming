@@ -13,12 +13,11 @@ void printSolution(int path[]) {
 }
 
 bool isSafe(int v, bool graph[V][V], int path[], int pos) {
-    // Check if this vertex is an adjacent vertex of the previously added vertex
+   
     if (graph[path[pos - 1]][v] == 0) {
         return false;
     }
 
-    // Check if the vertex has already been included in the path
     for (int i = 0; i < pos; i++) {
         if (path[i] == v) {
             return false;
@@ -28,11 +27,11 @@ bool isSafe(int v, bool graph[V][V], int path[], int pos) {
     return true;
 }
 
-// A recursive utility function to solve the Hamiltonian Cycle problem
+
 bool hamCycleUtil(bool graph[V][V], int path[], int pos) {
     // Base case: If all vertices are included in the path
     if (pos == V) {
-        // And if there is an edge from the last included vertex to the first vertex
+       
         if (graph[path[pos - 1]][path[0]] == 1) {
             return true;
         } else {
@@ -40,7 +39,7 @@ bool hamCycleUtil(bool graph[V][V], int path[], int pos) {
         }
     }
 
-    // Try different vertices as the next candidate in the Hamiltonian Cycle
+    
     for (int v = 1; v < V; v++) {
         // Check if this vertex can be added to the path
         if (isSafe(v, graph, path, pos)) {
@@ -51,12 +50,12 @@ bool hamCycleUtil(bool graph[V][V], int path[], int pos) {
                 return true;
             }
 
-            // If adding vertex v doesn't lead to a solution, remove it (Backtrack)
+            
             path[pos] = -1;
         }
     }
 
-    // If no vertex can be added to the path constructed so far
+    
     return false;
 }
 
