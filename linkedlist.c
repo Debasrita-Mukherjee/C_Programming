@@ -1,16 +1,14 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Define structure for node
 struct Node {
     int data;
     struct Node* next;
 };
 
-// Head pointer
+
 struct Node* head = NULL;
 
-// Function to create node and add at end
 void create(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     struct Node* temp = head;
@@ -27,7 +25,6 @@ void create(int data) {
     temp->next = newNode;
 }
 
-// Display list
 void display() {
     struct Node* temp = head;
     if (temp == NULL) {
@@ -42,7 +39,7 @@ void display() {
     printf("NULL\n");
 }
 
-// Insert at beginning
+
 void insertBeginning(int data) {
     struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
     newNode->data = data;
@@ -50,12 +47,10 @@ void insertBeginning(int data) {
     head = newNode;
 }
 
-// Insert at end
 void insertEnd(int data) {
     create(data); // already implemented
 }
 
-// Insert after given value
 void insertAfter(int key, int data) {
     struct Node* temp = head;
     while (temp != NULL && temp->data != key)
