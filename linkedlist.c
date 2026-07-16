@@ -65,7 +65,7 @@ void insertAfter(int key, int data) {
     temp->next = newNode;
 }
 
-// Insert before given value
+
 void insertBefore(int key, int data) {
     if (head == NULL) return;
     if (head->data == key) {
@@ -87,7 +87,6 @@ void insertBefore(int key, int data) {
     temp->next = newNode;
 }
 
-// Delete from beginning
 void deleteBeginning() {
     if (head == NULL) {
         printf("List is empty.\n");
@@ -98,7 +97,6 @@ void deleteBeginning() {
     free(temp);
 }
 
-// Delete from end
 void deleteEnd() {
     if (head == NULL) {
         printf("List is empty.\n");
@@ -116,7 +114,6 @@ void deleteEnd() {
     temp->next = NULL;
 }
 
-// Delete specific node by value
 void deleteNode(int key) {
     if (head == NULL) return;
     if (head->data == key) {
@@ -138,7 +135,6 @@ void deleteNode(int key) {
     free(del);
 }
 
-// Main menu-driven function
 int main() {
     int choice, data, key;
 
