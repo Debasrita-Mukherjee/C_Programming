@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <limits.h>
-
-// Function to find the minimum cost of matrix chain multiplication
 int matrixChainOrder(int p[], int n) {
     // Dynamically allocate the 2D array for the DP table
     int **m = (int **)malloc(n * sizeof(int *));
@@ -10,18 +8,17 @@ int matrixChainOrder(int p[], int n) {
         m[i] = (int *)malloc(n * sizeof(int));
     }
 
-    // Cost is 0 when multiplying one matrix
     for (int i = 1; i < n; i++) {
         m[i][i] = 0;
     }
 
-    // L is the chain length
+
     for (int L = 2; L < n; L++) {
         for (int i = 1; i < n - L + 1; i++) {
             int j = i + L - 1;
             m[i][j] = INT_MAX; 
 
-            // Try all possible splits between i and j
+            
             for (int k = i; k <= j - 1; k++) {
                 int q = m[i][k] + m[k + 1][j] + p[i - 1] * p[k] * p[j];
                 if (q < m[i][j]) {
@@ -33,7 +30,6 @@ int matrixChainOrder(int p[], int n) {
 
     int result = m[1][n - 1];
 
-    // Free allocated memory for the DP table
     for (int i = 0; i < n; i++) {
         free(m[i]);
     }
