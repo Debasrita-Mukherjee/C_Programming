@@ -47,24 +47,21 @@ int main() {
         return 1;
     }
 
-    // For 'count' matrices, we need 'count + 1' elements in the dimensions array
     int n = num_matrices + 1;
     int *p = (int *)malloc(n * sizeof(int));
 
     printf("\n--- Dimension Input ---\n");
     printf("Matrix i has dimensions: row [i-1] x col [i]\n");
     
-    // Get row dimension for the first matrix
     printf("Enter row size for Matrix 1: ");
     scanf("%d", &p[0]);
 
-    // Get column dimensions for all matrices
+  
     for (int i = 1; i < n; i++) {
         printf("Enter column size for Matrix %d: ", i);
         scanf("%d", &p[i]);
     }
 
-    // Print out what the user entered to verify
     printf("\nYour Matrix Chain Dimensions:\n");
     for (int i = 1; i < n; i++) {
         printf("Matrix %d: %d x %d\n", i, p[i-1], p[i]);
