@@ -1,15 +1,12 @@
 #include <stdio.h>
 
-// Function to swap two numbers
 void swap(int *a, int *b) {
     int temp = *a;
     *a = *b;
     *b = temp;
-}
 
-// Partition function
 int partition(int arr[], int low, int high) {
-    int pivot = arr[high];      // Last element as pivot
+    int pivot = arr[high];     
     int i = low - 1;
     int j;
 
@@ -29,8 +26,8 @@ void quickSort(int arr[], int low, int high) {
     if (low < high) {
         int p = partition(arr, low, high);
 
-        quickSort(arr, low, p - 1);   // Sort left part
-        quickSort(arr, p + 1, high);  // Sort right part
+        quickSort(arr, low, p - 1);   
+        quickSort(arr, p + 1, high); 
     }
 }
 
