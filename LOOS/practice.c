@@ -81,3 +81,45 @@
 // }
 // }
 // return 0;}
+#include <stdio.h>
+#define MAX 7
+int graph[MAX][MAX] =
+{
+ //A B C D E F G
+ {0,1,0,0,0,0,0},
+ {0,0,1,1,1,0,0},
+ {0,0,0,0,1,0,0},
+ {0,0,0,0,1,0,0},
+ {0,0,0,0,0,1,0},
+ {0,0,0,0,0,0,0},
+ {0,0,0,1,0,0,0}
+};
+int visited[MAX] = {0};
+int queue[MAX];
+int front = 0, rear = -1;
+char vertex[MAX] = {'A','B','C','D','E','F','G'};
+void bfs(int start)
+{
+ int i;
+ visited[start] = 1;
+ queue[++rear] = start;
+ while(front <= rear)
+ {
+ int current = queue[front++];
+ printf("%c ", vertex[current]);
+ for(i = 0; i < MAX; i++)
+ {
+ if(graph[current][i] == 1 && visited[i] == 0)
+ {
+ visited[i] = 1;
+ queue[++rear] = i;
+ }
+ }
+ }
+}
+int main()
+{
+ printf("BFS Traversal: ");
+ bfs(0);
+ return 0;
+}
