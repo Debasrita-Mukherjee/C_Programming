@@ -2,7 +2,6 @@
 #include <stdlib.h>
 #include <limits.h>
 
-// Structure to represent a weighted edge in the graph
 struct Edge {
     int source;
     int destination;
