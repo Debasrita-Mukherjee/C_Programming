@@ -36,8 +36,6 @@ void printSolution(int dist[], int n) {
     }
 }
 
-// The main function that finds shortest distances from source to
-// all other vertices using Bellman-Ford algorithm.
 void bellmanFord(struct Graph* graph, int source) {
     int V = graph->V;
     int E = graph->E;
