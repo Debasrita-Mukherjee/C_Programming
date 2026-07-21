@@ -9,14 +9,13 @@ int main() {
 
     originalNum = num;
 
-    // Count number of digits
     int temp = num;
     while (temp != 0) {
         temp /= 10;
         n++;
     }
 
-    // Calculate sum of nth powers of digits
+   
     temp = num;
     while (temp != 0) {
         remainder = temp % 10;
@@ -24,7 +23,6 @@ int main() {
         temp /= 10;
     }
 
-    // Check if number is Armstrong
     if (result == originalNum)
         printf("%d is an Armstrong number.\n", originalNum);
     else
