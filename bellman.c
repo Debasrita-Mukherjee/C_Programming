@@ -71,26 +71,23 @@ void bellmanFord(struct Graph* graph, int source) {
         }
     }
 
-    // If no negative cycle is found, print the distances
+  
     printSolution(dist, V);
 }
 
 int main() {
-    int V = 5; // Number of vertices in graph
-    int E = 8; // Number of edges in graph
+    int V = 5; 
+    int E = 8; 
     struct Graph* graph = createGraph(V, E);
 
-    // Adding edge 0-1
     graph->edge[0].source = 0;
     graph->edge[0].destination = 1;
     graph->edge[0].weight = -1;
 
-    // Adding edge 0-2
     graph->edge[1].source = 0;
     graph->edge[1].destination = 2;
     graph->edge[1].weight = 4;
 
-    // Adding edge 1-2
     graph->edge[2].source = 1;
     graph->edge[2].destination = 3;
     graph->edge[2].weight = 3;
@@ -123,7 +120,7 @@ int main() {
     int source_vertex = 0;
     bellmanFord(graph, source_vertex);
 
-    // Free allocated memory
+
     free(graph->edge);
     free(graph);
 
