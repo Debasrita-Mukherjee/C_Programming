@@ -8,14 +8,13 @@ struct Edge {
     int weight;
 };
 
-// Structure to represent a connected, directed, and weighted graph
 struct Graph {
-    int V; // Number of vertices
-    int E; // Number of edges
-    struct Edge* edge; // Array of edges
+    int V; 
+    int E; 
+    struct Edge* edge; 
 };
 
-// Function to create a graph with V vertices and E edges
+
 struct Graph* createGraph(int V, int E) {
     struct Graph* graph = (struct Graph*)malloc(sizeof(struct Graph));
     graph->V = V;
