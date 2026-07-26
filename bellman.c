@@ -23,7 +23,6 @@ struct Graph* createGraph(int V, int E) {
     return graph;
 }
 
-// Utility function to print the calculated distances
 void printSolution(int dist[], int n) {
     printf("Vertex   Distance from Source\n");
     for (int i = 0; i < n; ++i) {
