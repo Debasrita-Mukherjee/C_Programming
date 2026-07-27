@@ -34,7 +34,7 @@ int main() {
 
     dist[source] = 0;
 
-    // Relax all edges V-1 times
+
     for(i = 1; i <= V - 1; i++) {
         for(j = 0; j < E; j++) {
             int u = edges[j].src;
