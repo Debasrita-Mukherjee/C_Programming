@@ -28,7 +28,7 @@ int main() {
 
     int dist[V];
 
-    // Initialize distances
+   
     for(i = 0; i < V; i++)
         dist[i] = 99999;
 
@@ -47,7 +47,6 @@ int main() {
         }
     }
 
-    // Check for negative weight cycles
     for(j = 0; j < E; j++) {
         int u = edges[j].src;
         int v = edges[j].dest;
