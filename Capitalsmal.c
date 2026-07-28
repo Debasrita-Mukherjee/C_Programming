@@ -3,11 +3,9 @@
 int main() {
     char ch;
 
-    // Input character
     printf("Enter a character: ");
     scanf("%c", &ch);
 
-    // Check using else-if ladder
     if (ch >= 'A' && ch <= 'Z') {
         printf("'%c' is an Uppercase Letter.\n", ch);
     } 
