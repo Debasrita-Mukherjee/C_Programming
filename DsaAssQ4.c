@@ -54,7 +54,6 @@ void insertFront(int value) {
     printf("Inserted %d at front.\n", value);
 }
 
-// Delete from front
 int deleteFront() {
     if (isEmpty()) {
         printf("Deque is empty. Cannot delete from front.\n");
@@ -73,8 +72,6 @@ int deleteFront() {
 
     return value;
 }
-
-// Delete from rear
 int deleteRear() {
     if (isEmpty()) {
         printf("Deque is empty. Cannot delete from rear.\n");
@@ -94,7 +91,6 @@ int deleteRear() {
     return value;
 }
 
-// Get front element
 int getFront() {
     if (isEmpty()) {
         printf("Deque is empty.\n");
