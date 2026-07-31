@@ -6,17 +6,14 @@
 int deque[SIZE];
 int front = -1, rear = -1;
 
-// Check if deque is full
 int isFull() {
     return ((front == 0 && rear == SIZE - 1) || (front == rear + 1));
 }
 
-// Check if deque is empty
 int isEmpty() {
     return (front == -1);
 }
 
-// Insert at rear
 void insertRear(int value) {
     if (isFull()) {
         printf("Deque is full. Cannot insert at rear.\n");
@@ -26,7 +23,7 @@ void insertRear(int value) {
     if (isEmpty()) {
         front = rear = 0;
     } else if (rear == SIZE - 1) {
-        rear = 0;  // Wrap around
+        rear = 0;  
     } else {
         rear++;
     }
@@ -35,7 +32,6 @@ void insertRear(int value) {
     printf("Inserted %d at rear.\n", value);
 }
 
-// Insert at front
 void insertFront(int value) {
     if (isFull()) {
         printf("Deque is full. Cannot insert at front.\n");
@@ -45,7 +41,7 @@ void insertFront(int value) {
     if (isEmpty()) {
         front = rear = 0;
     } else if (front == 0) {
-        front = SIZE - 1;  // Wrap around
+        front = SIZE - 1; 
     } else {
         front--;
     }
@@ -63,9 +59,9 @@ int deleteFront() {
     int value = deque[front];
 
     if (front == rear) {
-        front = rear = -1;  // Only one element
+        front = rear = -1;  
     } else if (front == SIZE - 1) {
-        front = 0;  // Wrap around
+        front = 0;  
     } else {
         front++;
     }
@@ -99,7 +95,6 @@ int getFront() {
     return deque[front];
 }
 
-// Get rear element
 int getRear() {
     if (isEmpty()) {
         printf("Deque is empty.\n");
@@ -108,7 +103,6 @@ int getRear() {
     return deque[rear];
 }
 
-// Display deque
 void display() {
     if (isEmpty()) {
         printf("Deque is empty.\n");
@@ -126,7 +120,6 @@ void display() {
     printf("\n");
 }
 
-// Main function
 int main() {
     int choice, value;
 
