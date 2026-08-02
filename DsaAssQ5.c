@@ -6,23 +6,20 @@
 int deque[MAX];
 int front = -1, rear = -1;
 
-// Check if deque is full
 int isFull() {
     return ((front == 0 && rear == MAX - 1) || (front == rear + 1));
 }
 
-// Check if deque is empty
 int isEmpty() {
     return (front == -1);
 }
 
-// Insert at front
 void insertFront(int value) {
     if (isFull()) {
         printf("Deque Overflow! Cannot insert %d at front\n", value);
         return;
     }
-    if (front == -1) { // First element
+    if (front == -1) { 
         front = rear = 0;
     } else if (front == 0) {
         front = MAX - 1;
@@ -64,7 +61,6 @@ void deleteFront() {
     }
 }
 
-// Delete from rear
 void deleteRear() {
     if (isEmpty()) {
         printf("Deque Underflow! Cannot delete from rear\n");
