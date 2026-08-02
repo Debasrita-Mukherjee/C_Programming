@@ -33,7 +33,6 @@ void insertFront(int value) {
     printf("%d inserted at front\n", value);
 }
 
-// Insert at rear
 void insertRear(int value) {
     if (isFull()) {
         printf("Deque Overflow! Cannot insert %d at rear\n", value);
@@ -50,7 +49,6 @@ void insertRear(int value) {
     printf("%d inserted at rear\n", value);
 }
 
-// Delete from front
 void deleteFront() {
     if (isEmpty()) {
         printf("Deque Underflow! Cannot delete from front\n");
@@ -82,7 +80,6 @@ void deleteRear() {
     }
 }
 
-// Display elements
 void display() {
     if (isEmpty()) {
         printf("Deque is empty!\n");
