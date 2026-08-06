@@ -24,7 +24,7 @@ void initQueue(struct Queue* q) {
 void enqueue(struct Queue* q, int value) {
     struct Node* newNode = createNode(value);
     if (q->rear == NULL) {
-        // Queue is empty
+       
         q->front = q->rear = newNode;
         return;
     }
