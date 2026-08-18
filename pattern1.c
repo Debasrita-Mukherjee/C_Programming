@@ -3,12 +3,10 @@
 int main() {
     int rows, i, j, space;
 
-    // Define the number of rows for the triangle
     rows = 5;
 
-    // Outer loop for the number of rows
     for (i = 1; i <= rows; i++) {
-        // Inner loop for spaces
+
         for (space = 1; space <= rows - i; space++) {
             printf("  ");
         }
