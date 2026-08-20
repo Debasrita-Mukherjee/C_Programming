@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 int main() {
-    int rows = 4; // Number of rows in the pattern
+    int rows = 4;
     int a = 0, b = 1, next;
 
     for (int i = 1; i <= rows; i++) {
