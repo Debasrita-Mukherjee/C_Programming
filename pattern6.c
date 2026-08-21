@@ -1,11 +1,10 @@
 #include <stdio.h>
 
 int main() {
-    int rows = 4; // Maximum row count in the upper half
+    int rows = 4; 
 
-    // Upper Half of the Pattern
     for (int i = 1; i <= rows; i++) {
-        // Print increasing numbers
+ 
         for (int j = 1; j <= i; j++) {
             printf("%d", j);
         }
