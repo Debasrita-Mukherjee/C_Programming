@@ -19,7 +19,7 @@ int main() {
                 printf("* ");
             }
         }
-        // Print newline after each row
+    
         printf("\n");
     }
     return 0;
