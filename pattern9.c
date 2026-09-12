@@ -11,10 +11,10 @@ printf("* ");
 printf("\n");
 }
 for (int i = n - 2; i >= 0; i--) {
-// Print spaces
+
 for (int j = 0; j < i; j++)
 printf(" ");
-// Print stars
+
 for (int j = 0; j < n - i; j++)
 printf("* ");
 printf("\n");
