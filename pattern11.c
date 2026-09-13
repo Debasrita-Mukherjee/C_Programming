@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 void printHourglass(int n) {
-    // Upper half
+ 
     for (int i = 0; i < n; i++) {
-        // Print spaces
+    
         for (int j = 0; j < i; j++)
             printf("  ");
         // Print stars
