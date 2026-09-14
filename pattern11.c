@@ -6,7 +6,6 @@ void printHourglass(int n) {
     
         for (int j = 0; j < i; j++)
             printf("  ");
-        // Print stars
         for (int j = 0; j < n - i; j++)
             printf("* ");
         printf("\n");
