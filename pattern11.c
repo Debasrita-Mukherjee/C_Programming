@@ -11,7 +11,6 @@ void printHourglass(int n) {
         printf("\n");
     }
 
-    // Lower half
     for (int i = n - 2; i >= 0; i--) {
         // Print spaces
         for (int j = 0; j < i; j++)
