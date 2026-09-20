@@ -7,7 +7,6 @@ struct Node {
     struct Node* next;
 };
 
-// Head pointer for the list
 struct Node* head = NULL;
 
 // Function to create a new node
