@@ -18,7 +18,6 @@ struct Node* createNode(int data) {
     return newNode;
 }
 
-// Function to display the list
 void displayList() {
     struct Node* temp = head;
     printf("Doubly Linked List: ");
