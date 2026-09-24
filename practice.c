@@ -28,7 +28,6 @@ void displayList() {
     printf("NULL\n");
 }
 
-// Insert at beginning
 void insertAtBeginning(int data) {
     struct Node* newNode = createNode(data);
     if (head == NULL) {
