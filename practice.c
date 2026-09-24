@@ -39,7 +39,6 @@ void insertAtBeginning(int data) {
     head = newNode;
 }
 
-// Insert at end
 void insertAtEnd(int data) {
     struct Node* newNode = createNode(data);
     if (head == NULL) {
