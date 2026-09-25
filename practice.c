@@ -52,7 +52,6 @@ void insertAtEnd(int data) {
     newNode->prev = temp;
 }
 
-// Insert after a node with specific value
 void insertAfter(int key, int data) {
     struct Node* temp = head;
     while (temp != NULL && temp->data != key)
