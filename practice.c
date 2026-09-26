@@ -88,7 +88,6 @@ void insertBefore(int key, int data) {
     temp->prev = newNode;
 }
 
-// Delete from beginning
 void deleteFromBeginning() {
     if (head == NULL) {
         printf("List is empty.\n");
