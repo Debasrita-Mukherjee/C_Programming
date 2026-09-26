@@ -68,7 +68,6 @@ void insertAfter(int key, int data) {
     temp->next = newNode;
 }
 
-// Insert before a node with specific value
 void insertBefore(int key, int data) {
     if (head == NULL) return;
     if (head->data == key) {
