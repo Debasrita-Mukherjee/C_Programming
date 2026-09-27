@@ -116,8 +116,6 @@ void deleteFromEnd() {
     temp->prev->next = NULL;
     free(temp);
 }
-
-// Delete a specific node by value
 void deleteNode(int key) {
     struct Node* temp = head;
     if (temp == NULL) {
