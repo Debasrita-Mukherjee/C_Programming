@@ -100,7 +100,6 @@ void deleteFromBeginning() {
     free(temp);
 }
 
-// Delete from end
 void deleteFromEnd() {
     if (head == NULL) {
         printf("List is empty.\n");
