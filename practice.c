@@ -122,7 +122,6 @@ void deleteNode(int key) {
         printf("List is empty.\n");
         return;
     }
-    // If head node holds the key
     if (temp->data == key) {
         deleteFromBeginning();
         return;
