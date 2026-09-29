@@ -139,7 +139,6 @@ void deleteNode(int key) {
     free(temp);
 }
 
-// Main function
 int main() {
     int choice, data, key;
 
