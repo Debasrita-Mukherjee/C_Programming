@@ -138,7 +138,6 @@ void deleteNode(int key) {
         temp->prev->next = temp->next;
     free(temp);
 }
-
 int main() {
     int choice, data, key;
 
