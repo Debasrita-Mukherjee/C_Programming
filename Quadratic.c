@@ -7,7 +7,6 @@ int main() {
     printf("Enter coefficients a, b, and c: ");
     scanf("%lf %lf %lf", &a, &b, &c);
 
-    // Calculate discriminant
     discriminant = (b * b) - (4 * a * c);
 
     // Check the nature of roots using if-else
