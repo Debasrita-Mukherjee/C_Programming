@@ -9,7 +9,6 @@ int main() {
 
     discriminant = (b * b) - (4 * a * c);
 
-    // Check the nature of roots using if-else
     if (discriminant > 0) {
         // Two distinct real roots
         root1 = (-b + sqrt(discriminant)) / (2 * a);
