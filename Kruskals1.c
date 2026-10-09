@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Structure to represent a weighted edge
 struct Edge {
     int src, dest, weight;
 };
