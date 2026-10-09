@@ -10,7 +10,7 @@ int main() {
     discriminant = (b * b) - (4 * a * c);
 
     if (discriminant > 0) {
-        // Two distinct real roots
+    
         root1 = (-b + sqrt(discriminant)) / (2 * a);
         root2 = (-b - sqrt(discriminant)) / (2 * a);
         printf("Roots are real and distinct: %.2lf and %.2lf\n", root1, root2);
