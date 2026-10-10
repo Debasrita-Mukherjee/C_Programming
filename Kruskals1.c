@@ -5,7 +5,6 @@ struct Edge {
     int src, dest, weight;
 };
 
-// Structure to represent a graph
 struct Graph {
     int V, E;
     struct Edge* edge;
