@@ -10,7 +10,6 @@ struct Graph {
     struct Edge* edge;
 };
 
-// Structure to represent a subset for disjoint set
 struct subset {
     int parent;
     int rank;
