@@ -15,7 +15,6 @@ struct subset {
     int rank;
 };
 
-// Create a graph with V vertices and E edges
 struct Graph* createGraph(int V, int E) {
     struct Graph* graph = (struct Graph*) malloc(sizeof(struct Graph));
     graph->V = V;
