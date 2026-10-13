@@ -23,7 +23,6 @@ struct Graph* createGraph(int V, int E) {
     return graph;
 }
 
-// A utility function to find the set of an element i (uses path compression)
 int find(struct subset subsets[], int i) {
     if (subsets[i].parent != i)
         subsets[i].parent = find(subsets, subsets[i].parent);
