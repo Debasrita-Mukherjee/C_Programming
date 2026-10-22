@@ -29,7 +29,6 @@ int find(struct subset subsets[], int i) {
     return subsets[i].parent;
 }
 
-// A function that does union of two sets of u and v (uses union by rank)
 void Union(struct subset subsets[], int x, int y) {
     int xroot = find(subsets, x);
     int yroot = find(subsets, y);
@@ -51,7 +50,6 @@ int myComp(const void* a, const void* b) {
     return a1->weight - b1->weight;
 }
 
-// The main function to construct MST using Kruskal's algorithm
 void KruskalMST(struct Graph* graph) {
     int V = graph->V;
     struct Edge* result = (struct Edge*) malloc(V * sizeof(struct Edge)); 
