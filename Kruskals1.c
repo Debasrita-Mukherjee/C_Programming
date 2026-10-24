@@ -56,7 +56,6 @@ void KruskalMST(struct Graph* graph) {
     int e = 0; 
     int i = 0; 
 
-    // Step 1: Sort all the edges in non-decreasing order of their weight
     qsort(graph->edge, graph->E, sizeof(graph->edge[0]), myComp);
 
     // Allocate memory for creating V subsets
