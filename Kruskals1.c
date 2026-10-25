@@ -58,7 +58,6 @@ void KruskalMST(struct Graph* graph) {
 
     qsort(graph->edge, graph->E, sizeof(graph->edge[0]), myComp);
 
-    // Allocate memory for creating V subsets
     struct subset* subsets = (struct subset*) malloc(V * sizeof(struct subset));
 
     // Create V subsets with single elements
