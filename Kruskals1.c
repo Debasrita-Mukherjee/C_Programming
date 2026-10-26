@@ -60,7 +60,6 @@ void KruskalMST(struct Graph* graph) {
 
     struct subset* subsets = (struct subset*) malloc(V * sizeof(struct subset));
 
-    // Create V subsets with single elements
     for (int v = 0; v < V; ++v) {
         subsets[v].parent = v;
         subsets[v].rank = 0;
