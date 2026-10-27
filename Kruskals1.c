@@ -65,7 +65,6 @@ void KruskalMST(struct Graph* graph) {
         subsets[v].rank = 0;
     }
 
-    // Number of edges to be taken is equal to V-1
     while (e < V - 1 && i < graph->E) {
         struct Edge next_edge = graph->edge[i++];
 
